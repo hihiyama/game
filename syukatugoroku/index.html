@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>就活語録</title>
+
+    <script>
+      function omikuji (){
+          num = 44;
+          var dice = Math.floor(Math.random() * num);
+          
+      
+          document.getElementById("saisyo").style["display"] = "none";
+          document.getElementById("kekka").src = "images/card/" + dice +".png";
+          document.getElementById("kekka").style["display"] = "inline";
+          document.getElementById("button").src = "images/botan.png";
+      }
+  </script>
+  <style>
+      body {
+          background-image: url("images/bg.png");
+          background-size: 480px 730px;
+          background-repeat: no-repeat;
+          background-position-x: 530px;
+          background-position-y: 0px;
+          text-align:center;
+      }
+      #hako {
+          margin-top: 20%;
+          margin-left : 0;
+          margin-right : 0;
+      }
+      
+      img {
+         width: 25%; 
+         position: relative;
+         bottom: 230px;
+      }
+
+      #bottombar {
+          bottom: 30px;
+          width: 100%;
+      }
+  </style>
+  </head>
+  <body>
+    <div id="hako">
+      <img id="saisyo" src="images/hyoshi.png" />
+      <img id="kekka" style="display : none;"/>
+  </div>
+  <div id="bottombar">
+      <img id="button" src="images/omikuji-btn-hajimeru.png" onclick="omikuji()">
+  </div>
+  </body>
+</html>
